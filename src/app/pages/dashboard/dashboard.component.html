@@ -2,28 +2,30 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 mt-4" *ngFor="let data of movieData">
-            <div class="card p-2" >
-                <div class="row">
-                    <div class="col-md-12 mt-2 text-center">
-                        <img [src]="'./assets/image/' + data.image" width="200px" height="200px" alt="Image">
-                        <span style="background-color: yellow;border-radius: 5px;padding: 2px;" *ngIf="!data.release">Cooming Soon</span>
-                    </div>
-                    <div class="col-md-12 mt-3 text-center">
-                        <h4>{{data.name }}</h4>
-                    </div>
-                    <div class="col-md-12 mt-2">
+        <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Release Data</th>
+                <th scope="col">Release</th>
+                <th scope="col">Actors Name</th>
+                <th scope="col">Trailer</th>
 
-                        <p>Release Date : {{data.relaseDate}}</p>
-                        <H4>Actors</H4>
-                        <ul *ngFor="let ac of data.actors">
-                            <li>{{ac}}</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of movieData">
+                <th scope="row"> <img [src]="'./assets/image/' + data.image" width="100px" height="100px" alt="Image"></th>
+                <td>{{data.name }}</td>
+                <td>{{data.release?data.relaseDate:'Commig Soon'}}</td>
+                <td>{{data.release}}</td>
+                <td>{{data.actors}}</td>
+                <td><Button class="btn btn-sm btn-primary">Click</Button></td>
+              </tr>
+          
+            </tbody>
+          </table>
     </div>
 </div>
  
