@@ -36,6 +36,7 @@ this.router.navigate(['dashboard']);
     this.router.navigate(['admin-board'])
   }
   showPopUp(){
+     
     this.data.isPopUp=true;
   }
   close()

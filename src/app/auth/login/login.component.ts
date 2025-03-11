@@ -29,7 +29,7 @@ isLogin()
 {
   
   let userdata=this.appSevice.userLogin(this.loginForm.value);
-  debugger;
+   ;
   if(userdata){
     this.store.setuserRole(userdata?.role);
 userdata?.role=="admin"?this.router.navigate(['admin-board']):this.router.navigate(['dashboard'])

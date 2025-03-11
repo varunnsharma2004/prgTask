@@ -59,9 +59,9 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
     let rDate=this.convertToDate(rs.relaseDate)
-  debugger
+   
     if(new Date()>=rDate){
-      debugger
+       
       rs.release=true;
     Swal.fire({
       title: "Release!",
@@ -84,7 +84,7 @@ Swal.fire({
 return rs;
 })
 console.log(data);
-debugger;
+ ;
 }
 convertToDate(dateStr: string): Date {
   const [day, month, year] = dateStr.split('/');

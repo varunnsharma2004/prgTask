@@ -26,7 +26,7 @@
                 <th scope="row"> <img [src]="data.image?'./assets/image/' + data.image:'./assets/image/download.png'" width="100px" height="100px" alt="Image"></th>
                 <td>{{data.name }}</td>
                 <td>{{data.release?data.relaseDate:data.relaseDate+' (Commig Soon)'}}</td>
-                <td>{{data.release}}</td>
+                <td>{{data.release?'Yes':'No'}}</td>
                 <td>{{data.actors}}</td>
                 <td><Button class="btn btn-sm btn-primary"> <a [href]="data.link" style="color:white" target="_blank">Click</a></Button></td>
                 <td scope="col">{{data.comment}}</td>
