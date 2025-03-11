@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm" >
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username"  formControlName="userName">
+                    <span style="color:red" *ngIf="loginForm.controls['userName'].invalid && loginForm.controls['userName'].touched">Enter UserName</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                    <span style="color:red" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">Enter Password</span>
+                </div>
+                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary"(click)="isLogin()">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
