@@ -10,7 +10,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Release Data</th>
+                <th scope="col">Release Date</th>
                 <th scope="col">Release</th>
                 <th scope="col">Actors Name</th>
                 <th scope="col">Trailer</th>
@@ -28,7 +28,7 @@
                 <td><Button class="btn btn-sm btn-primary"> <a [href]="data.link" style="color:white" target="_blank">Click</a></Button></td>
                 <td><textarea [(ngModel)]="data.comment" rows="2" cols="20" placeholder="Add a comment"></textarea></td>
                 <td>
-                  <select [(ngModel)]="data.rating"  class="form-select" #val (change)="updateRating( data.id,val.value)">
+                  <select [(ngModel)]="data.rating"  class="form-select slt" #val (change)="updateRating( data.id,val.value)">
                     <option *ngFor="let rate of [1, 2, 3, 4, 5]" [value]="rate">{{rate}}/5</option>
                   </select>
                 </td>

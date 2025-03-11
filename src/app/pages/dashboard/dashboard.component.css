@@ -4,3 +4,7 @@ img{
  table,tr{
     text-align: center;
  }
+.slt{
+    border: none;
+    padding: 0;
+}

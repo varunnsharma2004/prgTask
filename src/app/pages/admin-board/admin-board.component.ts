@@ -73,7 +73,7 @@ Swal.fire({
     else{
       Swal.fire({
         title: "Not Released!",
-        text: "Release date is graterthen current data.",
+        text: "Release date is greater than current date.",
         icon: "error",
         timer: 1500,
         showConfirmButton: false})
