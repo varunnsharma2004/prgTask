@@ -1,5 +1,33 @@
 <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Movie Application</span>
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Movie Application</span>
+    <button class="btn btn-sm btn-primary" *ngIf="path=='admin-board'" style="    position: absolute;
+    right: 80px;" (click)="showPopUp()">Add Movie</button>
+    <button class="btn btn-sm btn-warning" *ngIf="path=='admin-board'" style="  position: absolute;
+    right: 170px;" (click)="moveDashBoard()">User DashBoard</button>
+    <button class="btn btn-sm btn-warning" *ngIf="role=='admin' && path!='admin-board'" style="  position: absolute;
+    right: 80px;" (click)="moveAdmin()">Admin Board</button>
+    <button class="btn btn-sm btn-warning" (click)="logout()">log out</button>
+
+  </div>
+
+</nav>
+
+<div class="popup-overlay" *ngIf="data.isPopUp">
+  <div class="popup-content">
+    <div class="row">
+      <div class="col-md-12 mt-2">
+        <h2>Add Movie</h2>
+        <hr>
+      </div>
     </div>
-  </nav>
+    <div class="col-md-12 mt-2">
+      <app-add-remove></app-add-remove>
+    </div>
+    <div class="col-md-12 mt-2 text-end">
+      
+      <button class="btn btn-warning btn-sm"   (click)="close()">Close</button>
+    </div>
+   
+  </div>
+</div>

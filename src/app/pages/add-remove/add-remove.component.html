@@ -1,1 +1,39 @@
-<p>add-remove works!</p>
+<div class="container">
+    <form [formGroup]="addMovie" class="row">
+       
+        <div class="col-md-12 mt-2">
+            <input type="text" class="form-control" placeholder="Movie Name" formControlName="name">
+        </div>
+        <div class="col-md-12 mt-2">
+            <input type="date" class="form-control" placeholder="Release Data"  formControlName="releaseDate">
+        </div>
+        <div class="col-md-12 mt-2">
+       
+           <select class="form-select" aria-label="Default select example"  formControlName="release">
+             
+            <option value="1">Release</option>
+            <option value="0">Not Release</option> 
+          </select>
+        </div>
+        <div class="col-md-12 mt-2">
+            <input type="url" class="form-control" placeholder="Trailer Link"  formControlName="link">
+        </div>
+        <div class="col-md-12 mt-2 text-start" >
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Actors Name" id="floatingTextarea2" style="height: 100px"  formControlName="actores"></textarea>
+                <label for="floatingTextarea2">Actors Name</label>
+                
+              </div>
+              <span style="font-size: 13px ; color: red;">Enter Multiple name using ',' comma</span>
+        </div>
+        <div class="col-md-12 mt-2">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"  formControlName="comment"></textarea>
+                <label for="floatingTextarea2">Comment </label>
+              </div>
+        </div>
+        <div class="col-md-12 mt-4 text-center">
+            <button class="btn btn-sm btn-primary w-100" (click)="createMovie()" [disabled]="addMovie.invalid" >Add Movie</button>
+        </div>
+    </form>
+</div>

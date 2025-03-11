@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class StoreService {
 
   constructor() { }
+
+  setuserRole=(roll:any)=>localStorage.setItem('Roll',roll);
+  getuserRole=()=>localStorage.getItem('Roll');
+  removeRole=()=>localStorage.removeItem('Roll');
 }
